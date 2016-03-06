@@ -9,12 +9,11 @@ MAINTAINER Paul Brewer <drpaulbrewer@eaftc.com>
 USER root
 
 # Install all OS dependencies for fully functional notebook server
+# (Note: With Ubuntu this layer was pushing 2GB so I removed emacs and jed)
 ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get update && apt-get install -yq --no-install-recommends \
     git \
-    vim \
-    jed \
-    emacs \
+    nano \
     wget \
     build-essential \
     python-dev \

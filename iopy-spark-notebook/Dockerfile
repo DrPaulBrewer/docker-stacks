@@ -23,8 +23,12 @@ ENV APACHE_SPARK_VERSION 1.6.0
 ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64
 
 # toree -- get the latest release from the official pip site instead of an old, frozen github hex commit
+# torees default kernel.json forces some obnoxious settings, erasing our SPARK_OPTS. "An eye for an eye" works here.
+COPY usr-local-share-jupyter-kernels-toree-kernel.json /tmp/
 RUN pip install toree \
-  && jupyter toree install
+  && jupyter toree install \
+  && cp /tmp/usr-local-share-jupyter-kernels-toree-kernel.json /usr/local/share/jupyter/kernels/toree/kernel.json
+
 
 # Mesos dependencies (Paul -- unchanged)
 RUN apt-key adv --keyserver keyserver.ubuntu.com --recv E56151BF && \
@@ -99,3 +103,4 @@ RUN jq --arg v "$CONDA_DIR/envs/python2/bin/python" \
         '.["env"]["PYSPARK_PYTHON"]=$v' \
         $CONDA_DIR/share/jupyter/kernels/python2/kernel.json > /tmp/kernel.json && \
         mv /tmp/kernel.json $CONDA_DIR/share/jupyter/kernels/python2/kernel.json
+
