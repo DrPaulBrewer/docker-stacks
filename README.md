@@ -2,8 +2,6 @@
 
 The official site is at https://github.com/jupyter/docker-stacks
 
-If this is useful to you, great.  
-
 What's here:
 
 ##iopy-spark-notebook
