@@ -5,6 +5,7 @@ This project is licensed under the terms of the Modified BSD License
 
 - Copyright (c) 2001-2015, IPython Development Team
 - Copyright (c) 2015-, Jupyter Development Team
+- copyrightable additions or changes by Paul Brewer Copyright (c) 2016 <drpaulbrewer@eaftc.com>
 
 All rights reserved.
 
