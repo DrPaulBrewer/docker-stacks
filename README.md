@@ -1,6 +1,6 @@
 # This is my personal, experimental fork of jupyter/docker-stacks
 
-The official site is at https://github.com/jupyter/docker-stacks
+If you are looking for jupyter's official github site it is at https://github.com/jupyter/docker-stacks
 
 What's here:
 
