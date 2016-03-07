@@ -1,4 +1,11 @@
-# Jupyter Notebook Python, Scala, R, Spark, Mesos Stack
+##  iopy-spark-notebook is a private fork of all-spark-notebook
+
+Please note these important differences from the original documentaion copied below.
+* The dockerhub image for iopy-spark-notebook is `drpaulbrewer/iopy-spark-notebook`
+* default --driver-memory is set to 24 GB and master is set to local[*], env `SPARK_OPTS` overrides
+
+
+## Jupyter Notebook Python, Scala, R, Spark, Mesos Stack
 
 ## What it Gives You
 
